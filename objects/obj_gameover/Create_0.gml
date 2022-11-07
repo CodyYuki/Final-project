@@ -4,5 +4,5 @@
 
 
 
-gameOver = false;
+gameOver = true;
 

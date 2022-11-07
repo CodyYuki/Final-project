@@ -5,11 +5,13 @@
   "resources": [
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"obj_gameover","path":"objects/obj_gameover/obj_gameover.yy",},"order":12,},
+    {"id":{"name":"fdebug","path":"fonts/fdebug/fdebug.yy",},"order":2,},
     {"id":{"name":"obj_sword","path":"objects/obj_sword/obj_sword.yy",},"order":3,},
     {"id":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},"order":8,},
     {"id":{"name":"spr_explosion","path":"sprites/spr_explosion/spr_explosion.yy",},"order":5,},
     {"id":{"name":"spr_bannana","path":"sprites/spr_bannana/spr_bannana.yy",},"order":7,},
     {"id":{"name":"spr_swipe","path":"sprites/spr_swipe/spr_swipe.yy",},"order":8,},
+    {"id":{"name":"fGameover","path":"fonts/fGameover/fGameover.yy",},"order":1,},
     {"id":{"name":"obj_debug","path":"objects/obj_debug/obj_debug.yy",},"order":4,},
     {"id":{"name":"Sprite13","path":"sprites/Sprite13/Sprite13.yy",},"order":12,},
     {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},"order":13,},

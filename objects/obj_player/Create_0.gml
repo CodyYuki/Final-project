@@ -34,3 +34,6 @@ healthbar_width = 260;
 healthbar_height = 24;
 healthbar_x = (320/2) - (healthbar_width/2)
 healthbar_y = ystart + 560;
+
+gameOver = false;
+gameOvercheck = true;
