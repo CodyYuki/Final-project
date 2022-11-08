@@ -3,7 +3,7 @@
 
 
 //draw_text(x, y,"Renshuu Game");
-
+draw_set_halign(fa_left);
 offset = 0;
 for (var i = 0;i <= 2; i++)
 {

@@ -68,25 +68,25 @@ if (gameOver == false)
 		if (xMove > 0)
 		{
 			right = 3;
-			image_xscale = -1;
+			
 		}
 		//left
 		if (xMove < 0)
 		{
 			right = 7;
-			image_xscale = 1;
+			
 		} 
 		//up
 		if (yMove < 0)
 		{
 			up = 1;
-			image_yscale = 1;
+			
 		}
 		//down
 		if (yMove > 0)
 		{
 			up = 5;
-			image_yscale = -1;
+			
 		} 
 
 		//up
@@ -236,5 +236,15 @@ if ((gameOver == true) && (gameOvercheck == true))
 {
 	instance_create_layer(obj_player.x, obj_player.y,"Instances",obj_explosion);
 	sprite_index = spr_weapon;
+	gameOvercheck = false;
 }
 //Health bar stuff
+
+if (gameOver == true)
+{
+	if (keyboard_check_pressed(vk_space))
+	{
+		room_goto(Titlescreen);
+		gameOver = false;
+	}
+}
