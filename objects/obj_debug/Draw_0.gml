@@ -53,3 +53,15 @@ if (instance_exists(obj_enemystonker))
 
 
 draw_text(obj_player.x, obj_player.y + 75,string(obj_player.invFrames));
+
+
+draw_text(obj_player.x, obj_player.y + 105,string(obj_player.playerdirection));
+
+if (instance_exists(obj_enemystonker))
+{
+	draw_text(obj_player.x, obj_player.y + 145,string(obj_enemystonker.knockbackDirection));
+}
+else
+{
+	draw_text(x, y, "0");
+}

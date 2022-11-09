@@ -1,8 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+attackAngle = 0;
 ///create event
 spawn_time = 0.1 * room_speed;
+
+playerOffsetX = 0;
+playerOffsetY = 0;
+
 
 safe_distance = 300;
 spd = 2;

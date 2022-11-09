@@ -3,12 +3,11 @@
 
 if (instance_exists(obj_player))
 {
-	x = obj_player.x + playerOffset;
-	y = obj_player.y + playerOffsetY;
+	x = obj_player.x + obj_player.playerOffsetX;
+	y = obj_player.y + obj_player.playerOffsetY;
 }
 
 framesActive += 1;
-
 
 
 

@@ -8,9 +8,9 @@ draw_set_font(Font1);
 //}
 if (menu_selection < 0)
 {
-	menu_selection = 2;
+	menu_selection = 1;
 }
-if (menu_selection >= 3)
+if (menu_selection > 1)
 {
 	menu_selection = 0;
 }
@@ -25,17 +25,17 @@ if (keyboard_check_pressed(vk_down))
 	menu_selection += 1;
 }
 
-if (keyboard_check_pressed(vk_space) && menu_selection == 1)
-{
-	room_goto_next();
-}
-
 if (keyboard_check_pressed(vk_space) && menu_selection == 0)
 {
 	room_goto_next();
 }
 
-if (keyboard_check_pressed(vk_space) && menu_selection == 2)
+//if (keyboard_check_pressed(vk_space) && menu_selection == 0)
+//{
+//	room_goto_next();
+//}
+
+if (keyboard_check_pressed(vk_space) && menu_selection == 1)
 {
 	game_end();
 }

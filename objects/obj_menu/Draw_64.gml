@@ -5,7 +5,7 @@
 //draw_text(x, y,"Renshuu Game");
 draw_set_halign(fa_left);
 offset = 0;
-for (var i = 0;i <= 2; i++)
+for (var i = 0;i <= 1; i++)
 {
 	draw_text(x, y + offset,string(menu[i]));
 	offset += 70;
@@ -21,7 +21,7 @@ if menu_selection == 1
 	draw_text(x - 40, y + 70,"> ");
 }
 
-if menu_selection == 2
-{
-	draw_text(x - 40, y + 140,"> ");
-}
+//if menu_selection == 2
+//{
+//	draw_text(x - 40, y + 140,"> ");
+//}

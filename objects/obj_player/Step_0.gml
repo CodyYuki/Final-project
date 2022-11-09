@@ -4,9 +4,11 @@ if (gameOver == false)
 		/// @description Insert description here
 		// You can write your code in this editor
 
+
+
 		var xMove = keyboard_check(vk_right) - keyboard_check(vk_left);
 		var yMove = keyboard_check(vk_down) - keyboard_check(vk_up);
-
+		
 		//subtracts the variables to be able to flip the sprite if moving to the right later
 		//below checks if the  player is moving at all
 		//if not moving it defaults to idle sprite
@@ -136,65 +138,67 @@ if (gameOver == false)
 
 
 
-
-
-
-		if (keyboard_check_pressed(vk_space))
+		if ((keyboard_check_pressed(vk_space)) || (keyboard_check_pressed(vk_enter)))
 		{
-			sword = instance_create_layer(obj_player.x, obj_player.y,"Instances",obj_attack);
+			audio_play_sound(snd_swipe, 10, false);
 			if (playerdirection == 3) //looking right
 			{
-				obj_attack.image_angle = 90;
-				sword.playerOffset = 40;
+				attackAngle = 90;
+				playerOffsetX = 40;
+				playerOffsetY = 0;
 			}
 
 			if (playerdirection == 7) // looking left
 			{
-				obj_attack.image_angle = 270;
-				sword.playerOffset = -60;
+				attackAngle = 270;
+				playerOffsetX = -60;
+				playerOffsetY = 0;
 			}
 
 			if (playerdirection == 1) //Looking up
 			{
-				obj_attack.image_angle = 180;
-				sword.playerOffset = 0;
-				sword.playerOffsetY = -60;
+				attackAngle = 180;
+				playerOffsetX = 0;
+				playerOffsetY = -60;
 			}
 
 			if (playerdirection == 5) //looking down
 			{
-				sword.playerOffset = 0;
-				sword.playerOffsetY = 40;
+				playerOffsetX = 0;
+				playerOffsetY = 60;
+				attackAngle = 360;
 			}
 	
 			if (playerdirection == 2) //looking up right
 			{
-				obj_attack.image_angle = 100;
-				sword.playerOffset = 20;
-				sword.playerOffsetY = -40;
+				attackAngle= 100;
+				playerOffsetX = 20;
+				playerOffsetY = -40;
 			}
 
 			if (playerdirection == 8) // looking up left
 			{
-				obj_attack.image_angle = 225;
-				sword.playerOffset = -40;
-				sword.playerOffsetY = -40;
+				attackAngle = 225;
+				playerOffsetX = -40;
+				playerOffsetY = -40;
 			}
 
 			if (playerdirection == 4) //Looking down right
 			{
-				obj_attack.image_angle = 280;
-				sword.playerOffset = -40;
-				sword.playerOffsetY = 40;
+				attackAngle = 280;
+				playerOffsetX = -40;
+				playerOffsetY = 40;
 			}
 
 			if (playerdirection == 6) //looking down left
 			{
-				obj_attack.image_angle = 45;
-				sword.playerOffset = 20;
-				sword.playerOffsetY = 40;
+				attackAngle = 65;
+				playerOffsetX = 54;
+				playerOffsetY = 40;
 			}
-
+		 newAttack = instance_create_layer(obj_player.x + playerOffsetX,obj_player.y + playerOffsetY,"Instances",obj_attack);
+		 newAttack.image_angle = attackAngle;
+		 newAttack.angle = -(attackAngle - 90);
 		}
 
 
