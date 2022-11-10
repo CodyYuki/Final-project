@@ -10,3 +10,7 @@ enemiesHit = ds_list_create();
 
 knockbackSpeed = 0;
 knockbackDirection = 0;
+
+
+flashAlpha = 0;
+flashColor = c_white;

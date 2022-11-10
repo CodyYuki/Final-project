@@ -42,6 +42,16 @@ if (instance_exists (obj_player))
 	}
 }
 
+
+//Reduce flash
+if (flashAlpha > 0)
+{
+	flashAlpha -= 0.05;
+}
+
+
+
+
 /*
 if (direction > 90 && direction < 270)
 {

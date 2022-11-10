@@ -42,4 +42,3 @@ healthbar_y = ystart + 320;
 gameOver = false;
 gameOvercheck = true;
 
-

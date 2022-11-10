@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+audio_play_sound(snd_hit, 8, false,1,0,random_range(1, 2));
 
 
 
@@ -26,4 +26,5 @@ if (ds_list_find_index(enemiesHit,other) == -1)
 
 ds_list_add(enemiesHit,other);
 
+other.flashAlpha = 1;
 
