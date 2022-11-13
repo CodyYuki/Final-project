@@ -209,7 +209,7 @@ if (gameOver == false)
 		{
 			instance_create_layer(obj_player.x, obj_player.y,"Instances",obj_bomb);
 		}
-
+image_alpha = 1;
 		//
 		if getHit == true
 		{
@@ -221,6 +221,7 @@ if (gameOver == false)
 		if !(invFrames <= 0)
 		{
 			invFrames = invFrames - 1;
+			image_alpha = 0.5;
 		}
 
 		if (PlayerHP <= 0)
