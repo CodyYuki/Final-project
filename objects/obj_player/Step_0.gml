@@ -21,6 +21,8 @@ if (gameOver == false)
 		{
 			//sprite_index = "Player idle running sprite"
 		}
+		
+		spd = global.walkSpeed;
 
 		x += xMove * spd;
 		y += yMove * spd;
@@ -60,6 +62,12 @@ if (gameOver == false)
 		I now realise theres no way to set it as
 		JUST right left up or down and will be stuck
 		in corners
+		
+		
+		
+		7	8	9
+		4	5	6
+		1	2	3
 		*/
 
 
@@ -138,7 +146,7 @@ if (gameOver == false)
 
 
 
-		if ((keyboard_check_pressed(vk_space)) || (keyboard_check_pressed(vk_enter)))
+		if (instance_number(obj_attack) < 1 && ((keyboard_check_pressed(vk_space)) || (keyboard_check_pressed(vk_enter))))
 		{
 			audio_play_sound(snd_swipe, 10, false);
 			if (playerdirection == 3) //looking right
@@ -196,9 +204,19 @@ if (gameOver == false)
 				playerOffsetX = 54;
 				playerOffsetY = 40;
 			}
-		 newAttack = instance_create_layer(obj_player.x + playerOffsetX,obj_player.y + playerOffsetY,"Instances",obj_attack);
-		 newAttack.image_angle = attackAngle;
-		 newAttack.angle = -(attackAngle - 90);
+			
+			gapMultiplier = global.slashSize;
+			if (gapMultiplier > 1.2)
+			{
+				gapMultiplier = 1.2;
+			}
+		
+			playerOffsetX = playerOffsetX * gapMultiplier;
+			playerOffsetY = playerOffsetY * gapMultiplier;
+		
+			newAttack = instance_create_layer(obj_player.x + playerOffsetX,obj_player.y + playerOffsetY,"Instances",obj_attack);
+			newAttack.image_angle = attackAngle;
+			newAttack.angle = -(attackAngle - 90);
 		}
 
 
@@ -240,6 +258,7 @@ if (alarm[0] == -1)
 if ((gameOver == true) && (gameOvercheck == true))
 {
 	instance_create_layer(obj_player.x, obj_player.y,"Instances",obj_explosion);
+	audio_play_sound(snd_gameover, 10, false);
 	sprite_index = spr_weapon;
 	gameOvercheck = false;
 }
@@ -253,3 +272,40 @@ if (gameOver == true)
 		gameOver = false;
 	}
 }
+
+if (batteryframes > 0)
+		{
+			batteryframes = batteryframes - 1;
+			sizeup = true;
+		}
+		else
+		{
+			sizeup = false;
+		}
+if (donutframes > 0)
+		{
+			donutframes = donutframes - 1;
+			donutgot = true;
+		}
+		else
+		{
+			donutgot = false;
+		}
+if (hotcoffeeframes > 0)
+		{
+			hotcoffeeframes = hotcoffeeframes - 1;
+			swingup = true;
+		}
+		else
+		{
+			swingup = false;
+		}
+if (bootsframes > 0)
+		{
+			bootsframes = bootsframes - 1;
+			speedup = true;
+		}
+		else
+		{
+			speedup = false;
+		}

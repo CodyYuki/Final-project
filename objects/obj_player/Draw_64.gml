@@ -34,3 +34,4 @@ if (gameOver == true)
 
 
 
+draw_text(healthbar_x + 1200,healthbar_y - 30,string(donutCounter));

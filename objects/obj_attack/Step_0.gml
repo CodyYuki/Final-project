@@ -14,6 +14,6 @@ framesActive += 1;
 
 if (framesActive >= 15)
 {
-	instance_destroy();
-	ds_list_destroy(enemiesHit);
+	//instance_destroy();
+	//ds_list_destroy(enemiesHit);
 }

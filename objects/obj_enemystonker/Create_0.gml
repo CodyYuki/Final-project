@@ -14,3 +14,5 @@ knockbackDirection = 0;
 
 flashAlpha = 0;
 flashColor = c_white;
+
+playerFound = false;

@@ -8,3 +8,8 @@ enemiesHit = ds_list_create();
 
 
 framesActive = 0;
+
+image_xscale = global.slashSize;
+image_yscale = global.slashSize;
+
+image_speed = global.slashSpeed;

@@ -9,16 +9,24 @@ playerOffsetY = 0;
 
 
 safe_distance = 300;
-spd = 2;
+spd = global.walkSpeed;
 
 global.directioncheck = 0;
 
 playerdirection = 0;
 //playerdirection will take variables of all 8 directions
+sizeup = false;
+speedup = false;
+donutgot = false;
+swingup = false;
+batteryframes = 0;
+bootsframes = 0;
+hotcoffeeframes = 0;
+donutframes = 0;
 
-
+donutCounter = 0;
 timer = 300; //duration between spawns (frames)
-
+textframes = 0;
 timer_min = 280; //minimum duration between spawns
 
 timer_dec = 1; //amount to reduce from duration each spawn
@@ -32,7 +40,7 @@ invFrames = 0;
 //Health bar stuff
 
 PlayerHP = 5;
-PlayerHP_max = PlayerHP;
+PlayerHP_max = 5;
 
 healthbar_width = 260;
 healthbar_height = 24;

@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-obj_counter.bannanaCounter += 1;
-instance_destroy();
 
-
-
+bootsframes = 60;
+global.walkSpeed += 0.3;
+speedup = true;
+instance_destroy(other);

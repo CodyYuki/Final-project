@@ -21,11 +21,27 @@ if (knockbackSpeed > 0)
 if (HP < 1)
 {
 	instance_destroy();
-	if (random(10) >= 9)
+	//if (random(10) >= 9)
+	//{
+	//  instance_create_depth(x, y , depth - 1 , obj_donut );
+	//}
+	randomdrop = round(random(4));
+	if (randomdrop = 1)
 	{
-	  instance_create_layer(x, y , "Instances" , obj_bannana );
+	  instance_create_depth(x, y , depth - 1 , obj_donut );
 	}
-	
+	if (randomdrop = 2)
+	{
+	  instance_create_depth(x, y , depth - 1 , obj_battery );
+	}
+	if (randomdrop = 3)
+	{
+	  instance_create_depth(x, y , depth - 1 , obj_hotcoffee );
+	}
+	if (randomdrop = 4)
+	{
+	  instance_create_depth(x, y , depth - 1 , obj_low_boots );
+	}
 }
 
 
@@ -33,6 +49,11 @@ if (instance_exists (obj_player))
 {
     if ((distance_to_object(obj_player) < 200) && (damaged == false))
     {
+		playerFound = true;
+	}
+	
+	if (playerFound)
+	{
 		direction = point_direction(x, y ,obj_player.x ,obj_player.y );
 		speed = spd;
     }

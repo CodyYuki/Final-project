@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_enemystonker",
   "spriteId": {
-    "name": "spr_enemystronker",
-    "path": "sprites/spr_enemystronker/spr_enemystronker.yy",
+    "name": "spr_thug1",
+    "path": "sprites/spr_thug1/spr_thug1.yy",
   },
   "solid": false,
   "visible": true,
