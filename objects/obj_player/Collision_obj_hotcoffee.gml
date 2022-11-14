@@ -3,6 +3,11 @@
 global.slashSpeed += 0.2;
 hotcoffeeframes = 60;
 swingup = true;
+audio_play_sound(snd_coffee, 9, false);
+if (instance_exists(obj_itemtext))
+{
+	obj_itemtext.textOffset = 0;
+}
 instance_destroy(other);
 
 

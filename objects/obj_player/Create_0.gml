@@ -7,6 +7,7 @@ spawn_time = 0.1 * room_speed;
 playerOffsetX = 0;
 playerOffsetY = 0;
 
+gameoverWait = false;
 
 safe_distance = 300;
 spd = global.walkSpeed;

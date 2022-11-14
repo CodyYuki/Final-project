@@ -3,6 +3,11 @@
 donutgot = true;
 donutframes = 60;
 donutCounter += 1;
+audio_play_sound(snd_donut, 9, false);
+if (instance_exists(obj_itemtext))
+{
+	obj_itemtext.textOffset = 0;
+}
 if (PlayerHP < PlayerHP_max)
 {
 	PlayerHP += 0.5;

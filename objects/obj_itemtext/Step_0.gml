@@ -1,0 +1,1 @@
+textOffset -= 1;

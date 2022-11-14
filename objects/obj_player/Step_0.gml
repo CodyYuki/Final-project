@@ -206,13 +206,17 @@ if (gameOver == false)
 			}
 			
 			gapMultiplier = global.slashSize;
+			if (gapMultiplier < 0.5)
+			{
+				gapMultiplier = 0.5;
+			}
 			if (gapMultiplier > 1.2)
 			{
 				gapMultiplier = 1.2;
 			}
 		
-			playerOffsetX = playerOffsetX * gapMultiplier;
-			playerOffsetY = playerOffsetY * gapMultiplier;
+			playerOffsetX = playerOffsetX * (gapMultiplier * 0.5);
+			playerOffsetY = playerOffsetY * (gapMultiplier * 0.5);
 		
 			newAttack = instance_create_layer(obj_player.x + playerOffsetX,obj_player.y + playerOffsetY,"Instances",obj_attack);
 			newAttack.image_angle = attackAngle;
@@ -261,15 +265,19 @@ if ((gameOver == true) && (gameOvercheck == true))
 	audio_play_sound(snd_gameover, 10, false);
 	sprite_index = spr_weapon;
 	gameOvercheck = false;
+	gameoverWait = true;
+	alarm[1] = 60;
 }
 //Health bar stuff
 
 if (gameOver == true)
 {
-	if (keyboard_check_pressed(vk_space))
+	if (keyboard_check_pressed(vk_space) && !gameoverWait)
 	{
-		room_goto(Titlescreen);
+		audio_stop_sound(snd_tempmusic);
 		gameOver = false;
+		room_goto(Titlescreen);
+		
 	}
 }
 

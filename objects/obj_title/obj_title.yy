@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_title",
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_titlelogo",
+    "path": "sprites/spr_titlelogo/spr_titlelogo.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

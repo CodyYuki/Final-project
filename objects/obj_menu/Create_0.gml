@@ -10,3 +10,5 @@ offset = 0;
 
 menu_but_as_a_variable = menu
 menu_selection = 0;
+
+audio_play_sound(snd_titlemusic, 9, true);

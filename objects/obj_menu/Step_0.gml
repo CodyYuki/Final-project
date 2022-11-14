@@ -27,6 +27,7 @@ if (keyboard_check_pressed(vk_down))
 
 if (keyboard_check_pressed(vk_space) && menu_selection == 0)
 {
+	audio_stop_sound(snd_titlemusic);
 	room_goto_next();
 }
 
