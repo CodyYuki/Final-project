@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 //alarm for shotting bullet
-alarm[0] = 2 * 60;
+alarm[0] = random_range(5,10) * 60;
 
 
 HP = 5;

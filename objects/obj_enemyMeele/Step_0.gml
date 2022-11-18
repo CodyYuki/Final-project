@@ -45,23 +45,23 @@ if (HP < 1)
 }
 
 
-//if (instance_exists (obj_player))
-//{
-//    if ((distance_to_object(obj_player) < 200) && (damaged == false))
-//    {
-//		playerFound = true;
-//	}
+if (instance_exists (obj_player))
+{
+    if ((distance_to_object(obj_player)) && (damaged == false))
+    {
+		playerFound = true;
+	}
 	
-//	if (playerFound)
-//	{
-//		direction = point_direction(x, y ,obj_player.x ,obj_player.y );
-//		speed = spd;
-//    }
-//	else
-//	{
-//		speed = 0;
-//	}
-//}
+	if ((playerFound) && (distance_to_object(obj_player)))
+	{
+		direction = point_direction(x, y ,obj_player.x ,obj_player.y );
+		speed = spd;
+    }
+	else
+	{
+		speed = 0;
+	}
+}
 
 
 //Reduce flash

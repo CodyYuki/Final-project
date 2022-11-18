@@ -15,11 +15,11 @@ if (gameOver == false)
 
 		if (xMove != 0 || yMove != 0)
 		{
-			//sprite_index = "Player Running sprite"
+			image_speed = 1;
 		}
 		else
 		{
-			//sprite_index = "Player idle running sprite"
+			image_speed = 0;
 		}
 		
 		spd = global.walkSpeed;
@@ -78,25 +78,25 @@ if (gameOver == false)
 		if (xMove > 0)
 		{
 			right = 3;
-			
+			sprite_index  = spr_right
 		}
 		//left
 		if (xMove < 0)
 		{
 			right = 7;
-			
+			sprite_index  = spr_left;
 		} 
 		//up
 		if (yMove < 0)
 		{
 			up = 1;
-			
+			sprite_index  = spr_up;
 		}
 		//down
 		if (yMove > 0)
 		{
 			up = 5;
-			
+			sprite_index  = spr_player;
 		} 
 
 		//up
