@@ -10,6 +10,6 @@ if (instance_exists(obj_itemtext))
 }
 if (PlayerHP < PlayerHP_max)
 {
-	PlayerHP += 0.5;
+	PlayerHP += 1;
 }
 instance_destroy(other);

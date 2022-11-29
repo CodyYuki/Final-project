@@ -236,7 +236,7 @@ image_alpha = 1;
 		if getHit == true
 		{
 			PlayerHP = PlayerHP - 1;
-			invFrames = 30;
+			invFrames = 70;
 			getHit = false;
 		}
 

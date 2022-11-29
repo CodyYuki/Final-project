@@ -25,20 +25,20 @@ if (HP < 1)
 	//{
 	//  instance_create_depth(x, y , depth - 1 , obj_donut );
 	//}
-	randomdrop = round(random(4));
-	if (randomdrop = 1)
+	randomdrop = round(random(3));
+	if (randomdrop = 0)
 	{
 	  instance_create_depth(x, y , depth - 1 , obj_donut );
 	}
-	if (randomdrop = 2)
+	if (randomdrop = 1)
 	{
 	  instance_create_depth(x, y , depth - 1 , obj_battery );
 	}
-	if (randomdrop = 3)
+	if (randomdrop = 2)
 	{
 	  instance_create_depth(x, y , depth - 1 , obj_hotcoffee );
 	}
-	if (randomdrop = 4)
+	if (randomdrop = 3)
 	{
 	  instance_create_depth(x, y , depth - 1 , obj_low_boots );
 	}
@@ -57,10 +57,6 @@ if (instance_exists (obj_player))
 		direction = point_direction(x, y ,obj_player.x ,obj_player.y );
 		speed = spd;
     }
-	else
-	{
-		speed = 0;
-	}
 }
 
 
