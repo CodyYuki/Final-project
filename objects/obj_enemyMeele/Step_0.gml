@@ -1,7 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+if (obj_dounutstore.gamecomplete == true)
+	{
+		instance_destroy(self);
+	}
 
 x += cos(knockbackDirection * (pi/180)) * knockbackSpeed / 60;
 y += sin(knockbackDirection * (pi/180)) * knockbackSpeed / 60;

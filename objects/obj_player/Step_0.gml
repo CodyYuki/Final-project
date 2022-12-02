@@ -1,6 +1,10 @@
 if (gameOver == false)
 {
-
+	if (obj_dounutstore.gamecomplete == false)
+	{
+	
+	
+	
 		/// @description Insert description here
 		// You can write your code in this editor
 
@@ -179,9 +183,9 @@ if (gameOver == false)
 	
 			if (playerdirection == 2) //looking up right
 			{
-				attackAngle= 100;
-				playerOffsetX = 20;
-				playerOffsetY = -40;
+				attackAngle= 140;
+				playerOffsetX = 25;
+				playerOffsetY = -35;
 			}
 
 			if (playerdirection == 8) // looking up left
@@ -252,6 +256,8 @@ image_alpha = 1;
 		}
 
 }
+}
+
 
 ///step event
 if (alarm[0] == -1) 
