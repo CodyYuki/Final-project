@@ -4,7 +4,10 @@
 //alarm for shotting bullet
 alarm[0] = 10 * 60;
 alarm[1] = 8 * 60;
-
+cooldown = 0;
+timetocircle = 0;
+Bcooldown = 0;
+Btimetocircle = 0;
 HP = 5;
 attackAngle = 0;
 damaged = false;

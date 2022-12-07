@@ -47,6 +47,7 @@ if (HP < 1)
 	}
 }
 
+
 if (instance_exists (obj_player))
 {
     if ((distance_to_object(obj_player)) && (damaged == false))
@@ -54,71 +55,44 @@ if (instance_exists (obj_player))
 		playerFound = true;
 	}
 	
-	if ((playerFound) && (distance_to_object(obj_player) > 200))
+	if ((playerFound) && (distance_to_object(obj_player)))
 	{
 		direction = point_direction(x, y ,obj_player.x ,obj_player.y );
 		speed = spd;
     }
-	else
-	{
-		speed = 0;
-	}
-}
-
-if ((distance_to_object(obj_box)) < 35)
-{
-	knockbackSpeed = 0;
-}
-
-
-closestBox = instance_nearest(x, y, obj_box);
-
- if ((((distance_to_object(obj_box))) < 25) && (cooldown <= 0))
+	
+		 if ((((distance_to_object(obj_box))) < 25) && (cooldown <= 0))
 		 {
-			radius = point_distance(closestBox.x, closestBox.y, x, y);
-			phase = point_direction(closestBox.x, closestBox.y, x, y);
+			radius = point_distance(obj_box.x, obj_box.y, x, y);
+			phase = point_direction(obj_box.x, obj_box.y, x, y);
 			timetocircle = 1.5 * 60;
 		 }
 		 if (timetocircle > 0)
 			{
 				phase += spd;
-				x = closestBox.x + radius * dcos(phase);
-				y = closestBox.y - radius * dsin(phase);
+				x = obj_box.x + radius * dcos(phase);
+				y = obj_box.y - radius * dsin(phase);
 				timetocircle = timetocircle - 1;
-				cooldown = 2.5 * 60
+				cooldown = 0.5 * 60
 			}
 			cooldown = cooldown - 1;
 			
-			
-		
-if ((distance_to_object(obj_bolder)) < 35)
-{
-	knockbackSpeed = 0;
-}
-
-
-closestBolder = instance_nearest(x, y, obj_bolder);
-
- if ((((distance_to_object(obj_bolder))) < 25) && (Bcooldown <= 0))
+			if ((((distance_to_object(obj_bolder))) < 25) && (cooldown <= 0))
 		 {
-			Bradius = point_distance(closestBolder.x, closestBolder.y, x, y);
-			Bphase = point_direction(closestBolder.x, closestBolder.y, x, y);
-			Btimetocircle = 1.5 * 60;
+			radius = point_distance(obj_box.x, obj_box.y, x, y);
+			phase = point_direction(obj_box.x, obj_box.y, x, y);
+			timetocircle = 1.5 * 60;
 		 }
-		 if (Btimetocircle > 0)
+		 if (timetocircle > 0)
 			{
-				Bphase += spd;
-				x = closestBolder.x + Bradius * dcos(Bphase);
-				y = closestBolder.y - Bradius * dsin(Bphase);
-				Btimetocircle = Btimetocircle - 1;
-				Bcooldown = 2.5 * 60
+				phase += spd;
+				x = obj_box.x + radius * dcos(phase);
+				y = obj_box.y - radius * dsin(phase);
+				timetocircle = timetocircle - 1;
+				cooldown = 0.5 * 60
 			}
-			Bcooldown = Bcooldown - 1;
-
-//Reduce flash
-if (flashAlpha > 0)
-{
-	flashAlpha -= 0.05;
+			cooldown = cooldown - 1;
+		
 }
 
 
@@ -127,17 +101,6 @@ if (flashAlpha > 0)
 {
 	flashAlpha -= 0.05;
 }
-
-if (shootingWarning > 0)
-{
-	shootingWarning -= 1;
-}
-
-shootingCheck = shootingWarning % 2;
-
-
-
-
 
 
 

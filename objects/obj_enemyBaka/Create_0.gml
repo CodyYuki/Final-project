@@ -3,10 +3,10 @@
 
 //alarm for shotting bullet
 alarm[0] = random_range(5,10) * 60;
+
 cooldown = 0;
 timetocircle = 0;
-Bcooldown = 0;
-Btimetocircle = 0;
+
 HP = 5;
 attackAngle = 0;
 damaged = false;

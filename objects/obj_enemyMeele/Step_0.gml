@@ -63,6 +63,56 @@ if (instance_exists (obj_player))
 }
 
 
+if ((distance_to_object(obj_box)) < 35)
+{
+	knockbackSpeed = 0;
+}
+
+
+closestBox = instance_nearest(x, y, obj_box);
+
+ if ((((distance_to_object(obj_box))) < 25) && (cooldown <= 0))
+		 {
+			radius = point_distance(closestBox.x, closestBox.y, x, y);
+			phase = point_direction(closestBox.x, closestBox.y, x, y);
+			timetocircle = 1.5 * 60;
+		 }
+		 if (timetocircle > 0)
+			{
+				phase += spd;
+				x = closestBox.x + radius * dcos(phase);
+				y = closestBox.y - radius * dsin(phase);
+				timetocircle = timetocircle - 1;
+				cooldown = 2.5 * 60
+			}
+			cooldown = cooldown - 1;
+			
+			
+		
+if ((distance_to_object(obj_bolder)) < 35)
+{
+	knockbackSpeed = 0;
+}
+
+
+closestBolder = instance_nearest(x, y, obj_bolder);
+
+ if ((((distance_to_object(obj_bolder))) < 25) && (Bcooldown <= 0))
+		 {
+			Bradius = point_distance(closestBolder.x, closestBolder.y, x, y);
+			Bphase = point_direction(closestBolder.x, closestBolder.y, x, y);
+			Btimetocircle = 1.5 * 60;
+		 }
+		 if (Btimetocircle > 0)
+			{
+				Bphase += spd;
+				x = closestBolder.x + Bradius * dcos(Bphase);
+				y = closestBolder.y - Bradius * dsin(Bphase);
+				Btimetocircle = Btimetocircle - 1;
+				Bcooldown = 2.5 * 60
+			}
+			Bcooldown = Bcooldown - 1;
+
 //Reduce flash
 if (flashAlpha > 0)
 {
