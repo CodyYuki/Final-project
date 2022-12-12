@@ -9,4 +9,4 @@ if (enemiesOnField < diff)
 	instance_create_depth(x,y,depth,obj_enemyMeele);
 	
 }
-alarm[0] = round(random_range(5.0, 15.0) * 60);
+alarm[0] = round(random_range(2.0, 10.0) * 60);

@@ -33,6 +33,6 @@ if (gameOver == true)
 		draw_text((ww / 2),(hh / 2) - 140, "Wow!\n You Died!");
 	}
 
-
+draw_set_font(Font1);
 draw_set_colour(c_white);
-draw_text(healthbar_x + 900,healthbar_y - 30,"Donuts: " + string(donutCounter));
+draw_text(healthbar_x + 1000,healthbar_y + 0,"Donuts: " + string(donutCounter));

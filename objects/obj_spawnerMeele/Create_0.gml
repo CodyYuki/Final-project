@@ -8,4 +8,4 @@ diff = 1;
 //time = 1;
 //timespent = time * 60;
 //alarm[1] = timespent
-alarm[1] = 80 * 60;
+alarm[1] = 30 * 60;

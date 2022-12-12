@@ -9,7 +9,7 @@ if (instance_exists(obj_player))
 	{
 		draw_set_font(fdounutstore);
 		draw_set_colour(c_white);
-		draw_text(x, y - 65,string("Collect 10 stolen dougunts from the Thugs and return!"));
+		draw_text(x, y - 65,string("Collect 10 stolen donuts from the Thugs and return!"));
     }
 }
 

@@ -231,10 +231,10 @@ if (gameOver == false)
 
 
 
-		if (keyboard_check_pressed(ord("Z")))
-		{
-			instance_create_layer(obj_player.x, obj_player.y,"Instances",obj_bomb);
-		}
+		//if (keyboard_check_pressed(ord("Z")))
+		//{
+		//	instance_create_layer(obj_player.x, obj_player.y,"Instances",obj_bomb);
+		//}
 image_alpha = 1;
 		//
 		if getHit == true
