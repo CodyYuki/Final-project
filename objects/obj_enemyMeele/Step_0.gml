@@ -119,7 +119,10 @@ if (flashAlpha > 0)
 	flashAlpha -= 0.05;
 }
 
-
+if (obj_player.spd >= 2.2)
+{
+	spd = 2;
+}
 
 //Shooting
 //bullet = instance_create_depth(x, y, depth, obj_enemybullet);

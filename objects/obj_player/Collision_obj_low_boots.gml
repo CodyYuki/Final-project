@@ -3,7 +3,7 @@
 
 draw_set_font(fdounutstore);
 bootsframes = 60;
-global.walkSpeed += 0.3;
+global.walkSpeed += 0.4;
 speedup = true;
 audio_play_sound(snd_boots, 9, false);
 if (instance_exists(obj_itemtext))

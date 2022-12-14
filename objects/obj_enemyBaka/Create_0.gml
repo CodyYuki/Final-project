@@ -10,7 +10,7 @@ timetocircle = 0;
 HP = 5;
 attackAngle = 0;
 damaged = false;
-spd = 2;
+spd = 1;
 invFrames = 0;
 enemiesHit = ds_list_create();
 

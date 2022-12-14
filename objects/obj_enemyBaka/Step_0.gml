@@ -102,6 +102,10 @@ if (flashAlpha > 0)
 	flashAlpha -= 0.05;
 }
 
+if (obj_player.spd >= 3.4)
+{
+	spd = 3;
+}
 
 
 //Shooting

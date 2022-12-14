@@ -7,10 +7,10 @@ cooldown = 0;
 timetocircle = 0;
 Bcooldown = 0;
 Btimetocircle = 0;
-HP = 5;
+HP = 4;
 attackAngle = 0;
 damaged = false;
-spd = 2;
+spd = 1;
 invFrames = 0;
 enemiesHit = ds_list_create();
 

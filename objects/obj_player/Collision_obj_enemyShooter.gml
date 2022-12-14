@@ -4,49 +4,49 @@ if (invFrames <= 0)
 	audio_play_sound(snd_playerhurt, 9, false);
 	audio_play_sound(snd_renshuuhurt, 9, false);
 	
-	if (playerdirection == 1)
-	{
-		y += 50;
-	}
+	//if (playerdirection == 1)
+	//{
+	//	y += 50;
+	//}
 	
-	if (playerdirection == 2)
-	{
-		y += 50;
-		x -= 50;
-	}
+	//if (playerdirection == 2)
+	//{
+	//	y += 50;
+	//	x -= 50;
+	//}
 	
-	if (playerdirection == 3)
-	{
-		x -= 50;
-	}
+	//if (playerdirection == 3)
+	//{
+	//	x -= 50;
+	//}
 	
-	if (playerdirection == 4)
-	{
-		y -= 50;
-		x += 50;
-	}
+	//if (playerdirection == 4)
+	//{
+	//	y -= 50;
+	//	x += 50;
+	//}
 	
-	if (playerdirection == 5)
-	{
-		y -= 50;
-	}
+	//if (playerdirection == 5)
+	//{
+	//	y -= 50;
+	//}
 	
-	if (playerdirection == 6)
-	{
-		y -= 50;
-		x -= 50;
-	}
+	//if (playerdirection == 6)
+	//{
+	//	y -= 50;
+	//	x -= 50;
+	//}
 	
-	if (playerdirection == 7)
-	{
-		x += 50;
-	}
+	//if (playerdirection == 7)
+	//{
+	//	x += 50;
+	//}
 	
-	if (playerdirection == 8)
-	{
-		y += 50;
-		x += 50;
-	}
+	//if (playerdirection == 8)
+	//{
+	//	y += 50;
+	//	x += 50;
+	//}
 	//var dirx;
 	//var diry;
 	//dirx = image_xscale;

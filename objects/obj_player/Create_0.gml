@@ -10,7 +10,7 @@ playerOffsetY = 0;
 gameoverWait = false;
 
 safe_distance = 300;
-spd = global.walkSpeed;
+global.walkSpeed = 1.3;
 
 global.directioncheck = 0;
 

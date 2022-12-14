@@ -20,7 +20,7 @@ if (framesActive < 10)
 	if (ds_list_find_index(enemiesHit,other) == -1)
 	{
 		other.knockbackDirection = angle;
-		other.knockbackSpeed = 400;
+		other.knockbackSpeed = 500;
 		other.HP = other.HP - 1;
 		show_debug_message(other.knockbackDirection);
 	}

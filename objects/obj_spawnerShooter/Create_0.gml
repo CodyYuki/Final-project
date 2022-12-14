@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 //60 is the frames and times 2 is just the seconds, easier way to read how much time in seconds
-alarm[0] = round(random_range(30.0, 40.0) * 60);
+alarm[0] = round(random_range(20.0, 21.0) * 60);
 enemiesOnField = 0;
 diff = 1;
 //time = 1;

@@ -197,7 +197,7 @@ if (gameOver == false)
 
 			if (playerdirection == 4) //Looking down right
 			{
-				attackAngle = 280;
+				attackAngle = 300;
 				playerOffsetX = -40;
 				playerOffsetY = 40;
 			}
